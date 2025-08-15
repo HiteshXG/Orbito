@@ -1,0 +1,3 @@
+mkdir migrations
+touch init.sql
+cd ..
