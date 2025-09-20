@@ -74,7 +74,7 @@ const DashboardLayout = ({
     { title: "Process Guide", icon: FileText, href: "/dashboard/process-guide",},
     { title: "Upcoming Events", icon: PartyPopper, href: "/dashboard/calendar" },
   ];
-  userRole = "admin";
+  userRole = "hr";
   const menuItems =
     userRole === "admin"
       ? adminMenuItems

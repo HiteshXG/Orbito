@@ -11,7 +11,7 @@ import { Button } from "./ui/button"
 
 interface ResumeUploadProps {
   jobDescriptions: Array<{
-    id: string
+    id: string | number;
     title: string
     department: string
   }>
@@ -158,7 +158,7 @@ const ResumeUpload = ({ jobDescriptions, onUploadComplete }: ResumeUploadProps) 
               </SelectTrigger>
               <SelectContent>
                 {jobDescriptions.map((job) => (
-                  <SelectItem key={job.id} value={job.id}>
+                  <SelectItem key={job.id} value={String(job.id)}>
                     {job.title} - {job.department}
                   </SelectItem>
                 ))}

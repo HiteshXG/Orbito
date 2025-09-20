@@ -17,3 +17,33 @@ const DashboardPage = () => {
 };
 
 export default DashboardPage;
+
+// import { redirect } from "next/navigation"
+// import DashboardLayout from "@/components/dashboard-layout"
+// import HRDashboard from "@/components/hr-dashboard"
+// import EmployeeDashboard from "@/components/employee-dashboard"
+// import AdminDashboard from "@/components/admin-dashboard"
+// import { getUser } from "@/lib/get-user"
+
+// export default async function DashboardPage() {
+//   const { user } = await getUser()
+
+//   // If no user, redirect to login
+//   if (!user) {
+//     redirect("/auth/login")
+//   }
+
+//   const userRole = user.user_metadata?.role || "employee"
+
+//   return (
+//     <DashboardLayout user={user} userRole={userRole}>
+//       {userRole === "admin" ? (
+//         <AdminDashboard />
+//       ) : userRole === "hr" ? (
+//         <HRDashboard user={user} profile={{ role: userRole }} />
+//       ) : (
+//         <EmployeeDashboard user={user} profile={{ role: userRole }} />
+//       )}
+//     </DashboardLayout>
+//   )
+// }
